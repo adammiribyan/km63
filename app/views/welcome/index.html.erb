@@ -1,2 +1,70 @@
 <%= title t "welcome.index.title" %>
+<div class="crew">
+  <span class="we">Мы</span>
+  <ul>
+    <% 4.times do %>
+    <li>
+      <figure>
+        <%= image_tag "http://img.artlebedev.ru/everything/illustrations/galushkov/thmb/auto.jpg" %>
+        <figcaption><%= link_to "Алексей Галушков", "" %></figcaption>
+      </figure>
+    </li>
+    <% end %>
+  </ul>
+  <ul class="links">
+    <li class="caption">Подробнее о нас:</li>
+    <li><%= link_to "люди", "" %></li>
+    <li><%= link_to "организации", "" %></li>
+    <li><%= link_to "мы сами", "" %></li>
+  </ul>
+</div>
 
+<div class="columns">
+  <section>
+    <h1>Ремонтируем</h1>
+    <ul>
+      <li><%= link_to "Компьютеры", "" %></li>
+      <li><%= link_to "Ноутбуки", "" %></li>
+      <li><%= link_to "Сотовые телефоны", "" %></li>
+      <li><%= link_to "Навигаторы", "" %></li>
+      <li>
+        <ul>
+          <li><%= link_to "iPhone", "" %></li>
+          <li><%= link_to "iPad", "" %></li>
+          <li><%= link_to "MacBook", "" %></li>
+          <li><%= link_to "iMac", "" %></li>
+          <li><%= link_to "iPod", "" %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Оргтехнику", "" %></li>
+    </ul>
+  </section>
+  
+  <section>
+    <h1>Обслуживаем</h1>
+    <ul>
+      <li><%= link_to "Сети", "" %></li>
+      <li><%= link_to "Компьютеры и ноутбуки (аутсорсинг)", "" %></li>
+      <li><%= link_to "Портфолио по обслуживанию", "" %></li>
+    </ul>
+  </section>
+  
+  <section>
+    <h1>Делаем сайты и приложения</h1>
+    <ul>
+      <li><%= link_to "Сайты", "" %></li>
+      <li><%= link_to "Веб-приложения", "" %></li>
+      <li><%= link_to "Продвижение и контекстная реклама", "" %></li>
+      <li><%= link_to "Наши сайты и приложения" "" %></li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>А также</h1>
+    <ul>
+      <li><%= link_to "Заправляем картриджи", "" %></li>
+      <li><%= link_to "Оцифровываем видео", "" %></li>
+      <li><%= link_to "Восстанавливаем данные", "" %></li>
+    </ul>
+  </section>
+</div>

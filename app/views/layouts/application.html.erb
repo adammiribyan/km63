@@ -46,22 +46,13 @@
           <%= simple_format "«Я очень давно сотрудничаю с компанией “Компьютерный Мир” и всегда довольна качеством оказываемых услуг»." %>
         </article>
       </div>
-
-      <div class="crew">
-        <span class="we">Мы</span>
-        <ul>
-          <% 4.times do %>
-          <li>
-            <figure>
-              <%= image_tag "http://img.artlebedev.ru/everything/illustrations/galushkov/thmb/auto.jpg" %>
-              <figcaption><%= link_to "Алексей Галушков", "" %></figcaption>
-            </figure>
-          </li>
-          <% end %>
-        </ul>
-      </div>
     </header>
     <%= yield %>
+    <footer>
+      &copy; 2012
+      <%= link_to "Контактная информация", "" %>
+      <%= link_to "Наши друзья и партнеры", "" %>
+    </footer>
   </div>
 
 </body>
