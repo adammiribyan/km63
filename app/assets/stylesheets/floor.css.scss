@@ -1,0 +1,11 @@
+.container {
+  width: 990px;
+  z-index: 100;
+  margin: 0 auto;
+  position: relative;
+
+  &>header {
+    padding: 1em 1.5em;
+  }
+}
+

@@ -24,11 +24,10 @@ gem 'jquery-rails'
 # Simple form for quick forms
 gem 'simple_form'
 
-# Guard's magic
-gem 'guard'
-gem 'guard-livereload'
-
 group :development do
+  # Guard's magic
+  gem 'guard'
+  gem 'guard-livereload'
   # Deploy with Capistrano
   gem 'capistrano'
   # Mail preview in browser
@@ -42,7 +41,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

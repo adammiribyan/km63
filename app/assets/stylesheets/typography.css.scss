@@ -1,0 +1,24 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.75em; // Base font size equals 12 px
+  color: #222;
+}
+
+a {
+  padding: 1px;
+
+  $link-color: #0047B3;
+
+  &:link, &:visited {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $link-color;
+    text-decoration: none; 
+  }
+}
+
+

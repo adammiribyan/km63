@@ -3,3 +3,6 @@
 
 ru:
   hello: "Hello world"
+  welcome:
+    index:
+      title: "Компьютерный Мир"
