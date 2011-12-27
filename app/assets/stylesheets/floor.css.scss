@@ -1,11 +1,138 @@
+html, body {
+  height: 100%;
+}
+
 .container {
   width: 990px;
+  min-height: 100%;
   z-index: 100;
   margin: 0 auto;
   position: relative;
 
-  &>header {
+  > header {
     padding: 1em 1.5em;
+    position: relative;
+    letter-spacing: 0;
+    z-index: 200;
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .recalls {
+      position: absolute;
+      width: 270px;
+      height: 310px;
+      top: 1em;
+      right: 1.5em;
+      font-size: 1.0833em;
+
+      img {
+        @include border-radius(4px);
+      }
+
+      hgroup {
+        margin-bottom: 1em;
+
+        h1 {
+          font-size: 1.333em;
+          line-height: 1;
+        }
+        
+        h2 {
+          font-size: 1.0833em;
+          line-height: 1.5;
+          color: #888;
+        }
+      }
+      
+      article {
+        font-size: 1.1667em;
+        line-height: 1.3;  
+
+        p {
+          margin-top: 0.5em;
+        }
+      } 
+    }
+
+    .logo, .branches {
+      @include inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+     }
+
+    .logo {
+      position: relative;
+      margin-right: 3em;
+      width: 196px;
+    }
+
+    .branches {
+      position: relative;
+      letter-spacing: 0;
+
+      section {
+        letter-spacing: normal;
+        vertical-align: top;
+        @include inline-block;
+        margin-right: 3em;
+
+        hgroup {
+          h1 {
+            font-size: 1.333em;
+          }
+
+          h2 {
+            font-size: 1.0833em;
+            color: #888;
+          }
+        }
+
+        ul.phones {
+          list-style: none;
+          padding: 0;
+          font-size: 1.1667em;
+
+          li {
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+
+  > footer {
+    position: relative;
+    border-top: 1px solid #ddd; 
+    padding: 1em 1.5em; 
+    font-size: 1.0833em;
+    line-height: 1.4;
+    letter-spacing: 0;
+    zoom: 1;
+    min-height: 70px;
+    _height: 70px;
+
+    .column {
+      position: relative;
+      @include inline-block;
+      vertical-align: top;
+      letter-spacing: normal;
+      margin-right: 20%;
+
+      ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0.25em 0 0 0;
+      }
+
+      &.right {
+        float: right;
+        margin-right: 0;
+      }
+    }
   }
 }
 

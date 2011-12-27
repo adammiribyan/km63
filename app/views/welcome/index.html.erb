@@ -1,12 +1,20 @@
 <%= title t "welcome.index.title" %>
+
 <div class="crew">
   <span class="we">Мы</span>
-  <ul>
-    <% 4.times do %>
+  <ul class="people">
+    <% @people = [ 
+      { photo: "http://img.artlebedev.ru/;-)/mikhaylov2.jpg", name: "Илья Михайлов" }, 
+      { photo: "http://img.artlebedev.ru/everything/illustrations/galushkov/thmb/auto.jpg", name: "Алексей Галушков" },
+      { photo: "http://img.artlebedev.ru/;-)/voronezhsky.jpg", name: "Рома Воронежский" },
+      { photo: "http://img.artlebedev.ru/;-)/burbaev.jpg", name: "Тимур Бурбаев" }
+    ] %>
+
+    <% @people.each do |person| %>
     <li>
       <figure>
-        <%= image_tag "http://img.artlebedev.ru/everything/illustrations/galushkov/thmb/auto.jpg" %>
-        <figcaption><%= link_to "Алексей Галушков", "" %></figcaption>
+        <%= image_tag "#{person[:photo]}", width: 100, height: 100 %>
+        <figcaption><%= link_to "#{person[:name]}", "" %></figcaption>
       </figure>
     </li>
     <% end %>
@@ -21,26 +29,6 @@
 
 <div class="columns">
   <section>
-    <h1>Ремонтируем</h1>
-    <ul>
-      <li><%= link_to "Компьютеры", "" %></li>
-      <li><%= link_to "Ноутбуки", "" %></li>
-      <li><%= link_to "Сотовые телефоны", "" %></li>
-      <li><%= link_to "Навигаторы", "" %></li>
-      <li>
-        <ul>
-          <li><%= link_to "iPhone", "" %></li>
-          <li><%= link_to "iPad", "" %></li>
-          <li><%= link_to "MacBook", "" %></li>
-          <li><%= link_to "iMac", "" %></li>
-          <li><%= link_to "iPod", "" %></li>
-        </ul>
-      </li>
-      <li><%= link_to "Оргтехнику", "" %></li>
-    </ul>
-  </section>
-  
-  <section>
     <h1>Обслуживаем</h1>
     <ul>
       <li><%= link_to "Сети", "" %></li>
@@ -49,6 +37,27 @@
     </ul>
   </section>
   
+  <section>
+    <h1>Ремонтируем</h1>
+    <ul>
+      <li><%= link_to "Компьютеры", "" %></li>
+      <li><%= link_to "Ноутбуки", "" %></li>
+      <li><%= link_to "Сотовые телефоны", "" %></li>
+      <li><%= link_to "Навигаторы", "" %></li>
+      <li><%= link_to "Оргтехнику", "" %></li>
+      <li>
+        <span class="apple">Apple</span>
+        <ul>
+          <li><%= link_to "iPhone", "" %></li>
+          <li><%= link_to "iPad", "" %></li>
+          <li><%= link_to "MacBook", "" %></li>
+          <li><%= link_to "iMac", "" %></li>
+          <li><%= link_to "iPod", "" %></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
   <section>
     <h1>Делаем сайты и приложения</h1>
     <ul>

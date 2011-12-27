@@ -1,0 +1,19 @@
+@mixin inline-block {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+@mixin border-radius ($radii) {
+  -webkit-border-radius: $radii;
+  -moz-border-radius: $radii;
+  -ms-border-radius: $radii;
+  -o-border-radius: $radii; 
+  border-radius: $radii; 
+}
+
+

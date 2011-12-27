@@ -1,3 +1,10 @@
+@import "pensieve";
+@import "floor";
+@import "forms";
+@import "typography";
+@import "patterns";
+@import "welcome";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -9,5 +16,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
+

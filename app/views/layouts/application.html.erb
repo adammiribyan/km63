@@ -5,8 +5,14 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!--[if !IE 7]>
+    <style type="text/css">
+      .container {display:table;height:100%}
+    </style>
+  <![endif]-->
 </head>
-<body>
+<body class="<%= params.values_at(:controller, :action).join(' ') %>">
   <div class="container">
     <header>
       <div class="logo">
@@ -43,15 +49,28 @@
             <h1>Светлана Кац</h1>
             <h2>Врач-рентгенолог</h2>
           </hgroup>
+          <%= image_tag "http://adammiribyan.com/assets/katz-acbe99e8c8e44793637e17b0e1156ba3.jpg" %>
           <%= simple_format "«Я очень давно сотрудничаю с компанией “Компьютерный Мир” и всегда довольна качеством оказываемых услуг»." %>
         </article>
+        <%= link_to "Остальные отзывы", "" %> наших клиентов.
       </div>
     </header>
     <%= yield %>
     <footer>
-      &copy; 2012
-      <%= link_to "Контактная информация", "" %>
-      <%= link_to "Наши друзья и партнеры", "" %>
+      <div class="column">
+        &copy; 2012 Компьютерный Мир
+        <ul>
+          <li><%= link_to "Контактная информация", "" %></li>
+          <li><%= link_to "Наши друзья и партнеры", "" %></li>
+        </ul>
+      </div>
+      <div class="column">
+        В Самаре: ул. Полевая, 43, офис 110.<br />
+        В Интернете: <%= mail_to "spark@km63.ru" %>.
+      </div>
+      <div class="column right">
+        <input type="search" placeholder="Поиск" />
+      </div>
     </footer>
   </div>
 

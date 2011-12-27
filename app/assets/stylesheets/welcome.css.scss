@@ -1,3 +1,116 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body.welcome {
+  .columns {
+    position: relative;
+    letter-spacing: 0;
+    zoom: 1;
+    width: 954px;
+    padding: 1em 1.5em;
+    margin: 3em -1.5em 0 0;
+
+    > section {
+      @include inline-block;
+      vertical-align: top;
+      letter-spacing: normal;
+      margin-right: 1.5em;
+
+      h1 {
+        margin: 0;
+      }
+
+      ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.1667em;
+          line-height: 1.7;
+
+          span {
+            display: block;
+            color: #888;
+            font-weight: bold;
+            margin: 0.75em 0 0.25em;
+          }
+        }
+      }
+    }
+  }
+
+  .crew {
+    position: relative;
+    padding: 1em 1.5em;
+    width: 670px;
+
+    .we {
+      font-size: 3em;
+      font-weight: bold;
+      margin: 0.25em 0.833em 0 0;
+    }
+
+    ul {
+      font-size: 1.0833em;
+      position: relative;
+      letter-spacing: 0;
+      zoom: 1;
+      list-style: none;
+      font-size: 1.0833em;
+      padding: 0;
+      margin-right: -1.5em;
+
+      li {
+        vertical-align: top;
+        letter-spacing: normal;
+        @include inline-block;
+      }
+   }
+
+   ul.people, span.we {
+     @include inline-block;
+     vertical-align: top;
+   }
+
+   ul.people {
+     figure {
+       img {
+         @include border-radius(4px);
+       }      
+
+       margin: 0;
+       text-align: center;
+     }
+     
+     li {
+       margin-right: 1.5em;
+     }
+   }
+
+   // Pervert style of punctiation
+   ul.links {
+     font-size: 1.1667em;     
+     left: 6.667em;
+
+     li {
+       &.caption {
+        background-color: #eee;
+        line-height: 1.4;
+       }    
+
+       &:last-child:after, &:first-child:after {
+         content: '';
+       }
+
+       &:last-child:after {
+         content: '.';
+       }
+
+       &:after {
+         content: ', ';
+       }
+     }
+   }
+  }
+}
