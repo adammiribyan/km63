@@ -17,13 +17,13 @@
     <header>
       <div class="logo">
         <%= link_to_unless_current image_tag("logo-km63-small.gif"), root_path %>
+        <span class="city">Самара</span>
       </div>
 
       <div class="branches">
         <section>
           <hgroup>
-            <h1>ул. Полевая, 43</h1>
-            <h2>Самара</h2>
+            <h1>ул. Пушкина, 229</h1>
           </hgroup>
           <ul class="phones">
             <li>(846) 922-81-47</li>
@@ -34,7 +34,6 @@
         <section>
           <hgroup>
             <h1>ул. Зои Космодемьянской, 21</h1>
-            <h2>Самара</h2>
           </hgroup>
           <ul class="phones">
             <li>(846) 922-70-47</li>
@@ -46,26 +45,27 @@
       <div class="recalls">
         <article>
           <hgroup>
-            <h1>Светлана Кац</h1>
+            <h1><%= link_to "Светлана Кац", "" %></h1>
             <h2>Врач-рентгенолог</h2>
           </hgroup>
-          <%= image_tag "http://adammiribyan.com/assets/katz-acbe99e8c8e44793637e17b0e1156ba3.jpg" %>
+          <%= link_to image_tag("http://adammiribyan.com/assets/katz-acbe99e8c8e44793637e17b0e1156ba3.jpg" ), "" %>
           <%= simple_format "«Я очень давно сотрудничаю с компанией “Компьютерный Мир” и всегда довольна качеством оказываемых услуг»." %>
         </article>
-        <%= link_to "Остальные отзывы", "" %> наших клиентов.
+        <%= link_to "Все отзывы", "" %> наших клиентов.
+        <%= image_tag "vk_box_placeholder.png", style: "display: block; margin-top: 2.75em;" %>
       </div>
     </header>
     <%= yield %>
     <footer>
       <div class="column">
-        &copy; 2012 Компьютерный Мир
+        &copy; 2012 <%= link_to_unless_current "Компьютерный Мир", root_path %> 
         <ul>
           <li><%= link_to "Контактная информация", "" %></li>
           <li><%= link_to "Наши друзья и партнеры", "" %></li>
         </ul>
       </div>
       <div class="column">
-        В Самаре: ул. Полевая, 43, офис 110.<br />
+        В Самаре: ул. Пушкина, 229, офис 8.<br />
         В Интернете: <%= mail_to "spark@km63.ru" %>.
       </div>
       <div class="column right">

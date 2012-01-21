@@ -67,6 +67,12 @@ html, body {
       position: relative;
       margin-right: 3em;
       width: 196px;
+
+      .city {
+        font-size: 1.25em;
+        color: #0047b3;
+        font-weight: 500;
+      }
     }
 
     .branches {
@@ -82,11 +88,6 @@ html, body {
         hgroup {
           h1 {
             font-size: 1.333em;
-          }
-
-          h2 {
-            font-size: 1.0833em;
-            color: #888;
           }
         }
 

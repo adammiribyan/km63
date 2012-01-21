@@ -7,9 +7,6 @@ gem 'rails', '3.2.0.rc1'
 
 gem 'mysql2'
 
-gem 'simple_form'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -24,10 +21,11 @@ gem 'jquery-rails'
 # Simple form for quick forms
 gem 'simple_form'
 
+# Guard's magic
+gem 'guard'
+gem 'guard-livereload'
+
 group :development do
-  # Guard's magic
-  gem 'guard'
-  gem 'guard-livereload'
   # Deploy with Capistrano
   gem 'capistrano'
   # Mail preview in browser
@@ -41,7 +39,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the web server
-gem 'unicorn'
+# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

@@ -4,26 +4,28 @@
 body.welcome {
   .columns {
     position: relative;
-    letter-spacing: 0;
-    zoom: 1;
-    width: 954px;
+    width: 68%%;
     padding: 1em 1.5em;
     margin: 3em -1.5em 0 0;
+    overflow: auto;
 
     > section {
-      @include inline-block;
       vertical-align: top;
-      letter-spacing: normal;
-      margin-right: 1.5em;
+      float: left;
+      position: relative;
+      min-width: 10em;
+      width: 50%;
+      margin-bottom: 1.4em;
 
       h1 {
-        margin: 0;
+        margin: 0 0 0.33em 0;
       }
 
       ul {
         position: relative;
         list-style: none;
         padding: 0;
+        margin: 0;
 
         li {
           font-size: 1.1667em;
